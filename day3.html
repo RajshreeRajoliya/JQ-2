@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body style="background-color: black; color: white;">
+  <center>
+    <h1>Welcome To Magical Forest</h1>
+    <button class="h">HIDE</button>
+    <button class="s">SHOW</button>
+<br><br><br><br><br>
+
+<div class="pond" style="background-color: powderblue; border-radius: 100%; height: 300px; width: 300px;">
+
+</div>
+
+<br><br><br><br><br>
+<img id="tree" src="https://media3.giphy.com/media/HSKUEdfuRwi4PMFrCG/giphy.gif?cid=6c09b952jfkkmgajtidgu466lgei3cjx0f2bbwvhwhackhnm&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="">
+<br><br><br><br><br>
+
+<input type="text">
+
+  </center> 
+</body>
+</html>
+<script>
+
+$(document).ready(function(){
+    $(".h").click(function(){
+        $("h1").hide()
+    })
+})
+$(document).ready(function(){
+    $(".s").click(function(){
+        $("h1").show()
+    })   
+})
+
+
+$(document).ready(function(){
+    $(".pond").mouseenter(function(){
+        $(".pond").css("box-shadow", "rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px")
+
+    })
+    $(".pond").mouseleave(function(){
+        $(".pond").css("box-shadow", "none")
+
+    })  
+
+})
+
+
+$(document).ready(function(){
+    $("#tree").dblclick(function(){
+        alert("Tree whispered a riddle!")
+    })
+})
+
+// $document.ready(function(){
+//     $(".in").keydown(function(){
+//         alert("kydown")
+//     })
+// })
+
+
+$(document).ready(function(){
+    $("input").keydown(function(){
+        $("input").css("background-color","lightblue")
+    })
+    $("input").keyup(function(){
+        $("input").css("background-color","red")
+    })
+})
+
+$(document).ready(function(){
+    $("input").keypress(function(k){
+        alert("Key pressed" + k.key)
+    })
+})
+$(document).ready(function(){
+    $("input").keydown(function(){
+        $("input").css("background-color","lightblue")
+    })
+    $("input").keyup(function(){
+        $("input").css("background-color","darkblue")
+    })
+})
+
+$(document).keypress(function(k){
+    alert("ENTER ANY KEY:" + k.key)
+})
+
+$(document).ready(function(){
+    $("body").click(function(){
+      $("h1").text("okbye")
+    })
+})
+</script>
