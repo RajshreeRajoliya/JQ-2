@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+</head>
+<style>
+    #chart{
+        height: 500px;
+        width: 500px;
+        float: left;
+    }
+    #calendar{
+        float: right;
+        width: 600px;
+        height: 500px;
+        
+    }
+    .box{
+        border: 1px solid;
+        height: 300px;
+        width: 300px;
+    }
+    .container{
+        margin-top: 600px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 10px;
+        column-gap: 50px;
+ 
+    }
+</style>
+
+<body>
+  
+   <div id="chart"></div>
+   <div id='calendar'></div>
+
+   <div class="container">
+    <div class="box" id="box-1">1</div>
+    <div class="box" id="box-2">2</div>
+    <div class="box" id="box-3">3</div>
+    <div class="box" id="box-4">4</div>
+    <div class="box" id="box-5">5</div>
+    <div class="box" id="box-6">6</div>
+   </div>
+  
+</body>
+</html>
+
+<script>
+      var options = {
+          series: [44, 55, 41, 17, 15],
+          chart: {
+          type: 'donut',
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    
+</script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+  </script>

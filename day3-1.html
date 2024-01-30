@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to forest</h1>
+    <button class="h">hide</button><button class="s">show</button>
+
+    <div class="pond" style="height: 300px; width: 300px; background-color: blanchedalmond;"></div>
+
+    <h1 class="heading">hhhh</h1>
+    <input type="text">
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('.h').click(function(){
+            $('h1').hide()
+        })
+        $('.s').click(function(){
+            $('h1').show()
+        })
+    })
+
+    $(document).ready(function(){
+        $('.pond').mouseenter(function(){
+            $('.pond').css("background-color","red")
+        })
+        $('.pond').mouseenter(function(){
+            $('.pond').css("background-color","blue")
+        })
+    })
+    $(document).ready(function(){
+        $(".heading").dblclick(function(){
+            alert("Please enter")
+        })
+    })
+
+    $(document).ready(function(){
+        $("input").keydown(function(){
+            $("input").css("background-color","red")
+        })
+        $("input").keyup(function(){
+            $("input").css("background-color","red")
+        })
+    })
+</script>
